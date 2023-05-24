@@ -32,3 +32,12 @@ This repository contains the following shell scripts:
 - Usage: `mkgh`
 - Notes: Make sure to configure your Git username before running the script.
 
+## Additional Tools
+
+For more useful shell tools and scripts, you can run the `shell-tools` command to get a list of available tools and their descriptions.
+
+To run `shell-tools`, execute the following command in your terminal:
+
+```bash
+shell-tools
+

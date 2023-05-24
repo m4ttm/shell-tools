@@ -1,0 +1,6 @@
+#!/bin/bash
+
+script_directory=$(dirname "$(readlink -f "$0")")
+directories=$(find "$script_directory" -maxdepth 1 -type d ! -path "$script_directory" -not -name ".*" -printf '%f\n' | tr '\n' '  ')
+
+echo "$directories"
