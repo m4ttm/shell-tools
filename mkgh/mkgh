@@ -1,0 +1,18 @@
+#!/bin/bash
+username=$(git config user.name)
+repo=$(basename "$(pwd)")
+url="https://github.com/$username/$repo.git"
+echo "$username"
+echo "$repo"
+echo "$url"
+if [ ! -f README.md ]; then
+    echo "# $repo" > README.md
+fi
+
+git init
+git add *
+git add .*
+git commit -am "Initial commit"
+git branch -M main
+git remote add origin "$url"
+git push -u origin main

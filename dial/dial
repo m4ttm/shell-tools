@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo Usage: dial [dialing code] 
+else
+    script_dir="$(dirname "${BASH_SOURCE[0]}")"
+    cat "$script_dir/codes.json" | grep $1
+fi

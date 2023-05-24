@@ -1,0 +1,14 @@
+#!/bin/bash
+source ~/.env
+if [[ $1 == "-p" || $1 == "--pair" ]]; then
+    bluetoothctl pair $HEADPHONES_MAC
+elif [[ $1 == "-h" || $1 == "--help" ]]; then
+    echo "Usage: headphones [OPTION]"
+    echo "Connect to my headphones"
+    echo ""
+    echo "Options:"
+    echo "  -p, --pair  Pair the device instead of connecting"
+    echo "  -h, --help  Show this help"
+else
+    bluetoothctl connect $HEADPHONES_MAC
+fi
